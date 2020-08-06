@@ -3,11 +3,13 @@ body{
     background-color: f9f7d9;
 }
 .button{
-    display: flex;
+    display: grid;
     justify-content: center;
     
 
 }
 .content{
-    
+    display: grid;
+   
+
 }
