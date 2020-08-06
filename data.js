@@ -7,22 +7,23 @@ const click = document.getElementById("get");
     .then(data =>{
         console.log(data.results['0'])
   
-    card.innerHTML= `<div class="card">
-                      
-    <div class="image" style="width: 18rem;">
-                      <img src="${data.results['0'].picture.large}" class="rounded-circle"alt="Responsive image">
-                      </div>
-                      
-                      <div class="card-body">
-                      <h3>${data.results['0'].name.first}</h3>
-                      <p>Genero: ${data.results['0'].gender}</p>
-                      <p>Email: ${data.results['0'].email}</p>
-                      <p>Edad: ${data.results['0'].dob.age}</p>
-                      <p>Pais: ${data.results['0'].location.country}</p>
-                      <p>Ciudad: ${data.results['0'].location.city}</p>
-                     
-                      </div>
-                    </div>`
+    card.innerHTML= `<div class="card" id="content">
+    <div class="row">
+    <div class="col s12 m2">
+      <div class="card">
+        <div class="card-image">
+          <img src="${data.results['0'].picture.large}">
+          <span class="card-title">${data.results['0'].name.title}</span>
+        </div>
+        <div class="card-content">
+          <p>Hello, my name is ${data.results['0'].name.first} ${data.results['0'].name.last}, I am ${data.results['0'].dob.age} years old and I am from ${data.results['0'].location.city}, ${data.results['0'].location.country}. My contact details are, e-mail ${data.results['0'].email}, and my cell phone is ${data.results['0'].phone}
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>`
 
                 })
  });
