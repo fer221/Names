@@ -1,1 +1,3 @@
-//Logica de la data, Manipulacion de filter 
+
+
+ 
